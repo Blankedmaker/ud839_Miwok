@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         TextView numbers = (TextView) findViewById(R.id.numbers);
         numbers.setOnClickListener(new View.OnClickListener(){
            public void onClick(View view){
-               Intent intent = new Intent(MainActivity.this, NumbersActivity.class);
-               startActivity(intent);
+               Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+               startActivity(numbersIntent);
            }
         });
         //Toast.makeText(view.getContext(), "Open the list of numbers",Toast.LENGTH_SHORT).show();
@@ -43,24 +43,24 @@ public class MainActivity extends AppCompatActivity {
         TextView phrases = (TextView) findViewById(R.id.phrases);
         phrases.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, PhrasesActivity.class);
-                startActivity(intent);
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
             }
         });
 
         TextView family = (TextView) findViewById(R.id.family);
         family.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, FamilyActivity.class);
-                startActivity(intent);
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(familyIntent);
             }
         });
 
         TextView colors = (TextView) findViewById(R.id.colors);
         colors.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, ColorsActivity.class);
-                startActivity(intent);
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(colorsIntent);
             }
         });
 
