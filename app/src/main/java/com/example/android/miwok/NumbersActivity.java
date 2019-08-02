@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
+
 import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
@@ -18,22 +20,24 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        ArrayList<String> words = new ArrayList<>();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
+        ArrayList<Words> words = new ArrayList<>();
+        words.add(new Words("one","lutti"));
+        words.add(new Words("two","otiiko"));
+        words.add(new Words("three","tolookosu"));
+        words.add(new Words("four","oyyisa"));
+        words.add(new Words("five","massokka"));
+        words.add(new Words("six","temmokka"));
+        words.add(new Words("seven","kenekaku"));
+        words.add(new Words("eight","kawinta"));
+        words.add(new Words("nine",""));
+        words.add(new Words("ten",""));
 
         //ListView implementation, good for memory!
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, words);
+        WordsAdapter adapter = new WordsAdapter(this, words);
+
+       // ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this,android.R.list_item,words);
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(adapter);
 
     /*LinearLayout implementation (bad for memory on very long lists)
         LinearLayout rootView = (LinearLayout) findViewById(R.id.list);
@@ -42,7 +46,6 @@ public class NumbersActivity extends AppCompatActivity {
             wordsView.setText(words.get(i));
             rootView.addView(wordsView);
         }*/
-
 
     }
 }
