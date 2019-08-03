@@ -2,13 +2,7 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
-
 
 
 import java.util.ArrayList;
@@ -18,7 +12,7 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.words_list);
 
         ArrayList<Words> words = new ArrayList<>();
         words.add(new Words("one","lutti"));
@@ -36,7 +30,7 @@ public class NumbersActivity extends AppCompatActivity {
         WordsAdapter adapter = new WordsAdapter(this, words);
 
        // ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this,android.R.list_item,words);
-        ListView listView = (ListView) findViewById(R.id.numbers_list);
+        ListView listView = (ListView) findViewById(R.id.words_list_id);
         listView.setAdapter(adapter);
 
     /*LinearLayout implementation (bad for memory on very long lists)
