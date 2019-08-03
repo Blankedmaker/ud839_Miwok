@@ -29,14 +29,14 @@ public class NumbersActivity extends AppCompatActivity {
         words.add(new Words("six","temmokka"));
         words.add(new Words("seven","kenekaku"));
         words.add(new Words("eight","kawinta"));
-        words.add(new Words("nine",""));
-        words.add(new Words("ten",""));
+        words.add(new Words("nine","wo’e"));
+        words.add(new Words("ten","na’aacha"));
 
         //ListView implementation, good for memory!
         WordsAdapter adapter = new WordsAdapter(this, words);
 
        // ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this,android.R.list_item,words);
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.numbers_list);
         listView.setAdapter(adapter);
 
     /*LinearLayout implementation (bad for memory on very long lists)
